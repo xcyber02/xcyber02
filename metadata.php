@@ -2,7 +2,7 @@
 
 session_start();
 
-$self = "meta.php";
+$self = "metadata.php";
 $selfdb = "phpfm.db";
 
 // Has posix
